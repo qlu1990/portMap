@@ -1,0 +1,19 @@
+{
+
+    "es":{"dockername":"es","requires":[]},
+    "mysql":{"dockername":"mysql","requires":[]},
+    "hadoop":{"dockername":"namenode","requires":[]},
+    "hbase":{"dockername":"hbasemaster","requires":["hadoop"]},
+    "map":{"dockername":"map","requires":["hbase"]},
+    "neo4j":{"dockername":"neo4j","requires":[""]},
+    "cas":{"dockername":"cas","requires":["mysql"]},
+    "front":{"dockername":"front","requires":["backend"]},
+    "backend":{"dockername":"backend","requires":["cas","es","mysql","neo4j"]},
+    "all":{"dockername":"all","requires":["hadoop","hbase","map","cas","es","mysql","neo4j","backend","front"]},
+    "logpath":"/home/qlu1990/code/go/src/manager/logs",
+    "htmlpath":"/home/qlu1990/code/go/src/manager"
+
+
+
+
+}
